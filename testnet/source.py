@@ -12,12 +12,13 @@ def public_files(root=ROOT):
     root = Path(root).resolve()
     paths = [root/name for name in DOCS]
     paths.append(root/'v2/storage.py')
-    paths.extend(root/package/'results/.gitkeep' for package in ('exchange', 'testnet', 'provenance'))
-    for package in ('exchange', 'testnet', 'provenance'):
+    paths.extend(root/package/'results/.gitkeep' for package in ('exchange', 'testnet', 'provenance', 'economy'))
+    for package in ('exchange', 'testnet', 'provenance', 'economy'):
         for pattern in ('*.py', '*.md', 'requirements*.txt', '*.cnf', 'tests/*.py'):
             paths.extend((root/package).glob(pattern))
     paths.append(root/'exchange/tests/fixtures/legacy_v1.json')
     paths.extend((root/'scripts').glob('*.py'))
+    paths.extend((root/'scripts').glob('*.ps1'))
     paths.extend((root/'.github/workflows').glob('*.yml'))
     result = []
     for path in sorted(set(paths)):

@@ -9,7 +9,7 @@ sys.path.insert(0, str(ROOT))
 
 def main():
     suite = unittest.TestSuite()
-    for package in ('exchange', 'testnet', 'provenance'):
+    for package in ('exchange', 'testnet', 'provenance', 'economy'):
         suite.addTests(unittest.defaultTestLoader.discover(str(ROOT/package/'tests'),
                                                          top_level_dir=str(ROOT)))
     result = unittest.TextTestRunner(verbosity=2).run(suite)

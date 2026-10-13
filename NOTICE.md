@@ -3,7 +3,7 @@
 Créateur déclaré du réseau et titulaire indiqué pour ses nouvelles sources :
 **jeremy zgonec — 2026**.
 
-Les nouvelles sources du réseau (`exchange/`, `testnet/`, `provenance/`),
+Les nouvelles sources du réseau (`exchange/`, `testnet/`, `provenance/`, `economy/`),
 l'utilitaire partagé `v2/storage.py`, les scripts et documents de préparation
 publique sont proposés sous **GNU Affero General Public License version 3
 uniquement**, identifiant SPDX **AGPL-3.0-only**. Le texte complet est dans

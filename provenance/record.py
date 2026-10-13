@@ -15,17 +15,18 @@ AUTHOR = 'jeremy zgonec'
 MAGIC = b'ATPROV1\x00'
 HEADER = struct.Struct('>8sI32s')
 SOURCE_PATTERNS = ('*.py', '*.md', 'LICENSE', '.gitignore', '.gitattributes', 'GUIDE*', 'requirements*.txt',
-                   'scripts/*.py', '.github/workflows/*.yml', 'tests/*.py',
+                   'scripts/*.py', 'scripts/*.ps1', '.github/workflows/*.yml', 'tests/*.py',
                    'v2/*.py', 'v2/*.txt', 'v2/tests/*.py',
                    'exchange/*.py', 'exchange/*.md', 'exchange/*.txt', 'exchange/tests/*.py', 'exchange/tests/fixtures/*.json',
                    'testnet/*.py', 'testnet/*.md', 'testnet/tests/*.py',
+                   'economy/*.py', 'economy/*.md', 'economy/tests/*.py',
                    'provenance/*.py', 'provenance/*.md', 'provenance/*.cnf', 'provenance/tests/*.py')
 DATA_PATTERNS = ('resultats/*.json', 'v2/results/**/data.json', 'v2/results/**/protocol.json',
                  'v2/results/**/report.json', 'v2/results/**/consensus_report.json',
                  'exchange/results/**/ledger.json', 'exchange/results/**/demo_report.json',
                  'testnet/results/**/ledger.sqlite3', 'testnet/results/**/report.json',
                  'testnet/results/**/wallets.json', 'testnet/results/**/branches.json',
-                 'testnet/results/**/trace_wallet-*.json')
+                 'testnet/results/**/trace_wallet-*.json', 'economy/results/**/report.json')
 MODEL_PATTERNS = ('resultats/checkpoints/*.pt', 'v2/results/**/checkpoints/*.pt')
 
 

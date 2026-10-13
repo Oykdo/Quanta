@@ -24,6 +24,7 @@ Its purpose is to support useful cooperation between autonomous communities.
 - [API routes](#api-routes)
 - [Tests and public source checks](#tests-and-public-source-checks)
 - [Provenance and timestamps](#provenance-and-timestamps)
+- [Economic pilot simulation](#economic-pilot-simulation)
 - [Governance and next milestones](#governance-and-next-milestones)
 - [Detailed documentation](#detailed-documentation)
 
@@ -90,6 +91,11 @@ set that variable again from the repository root. For Bash, use `python` in
 place of `& $Python` and forward-slash paths.
 
 ## Start a local testnet
+
+For a small Windows-only test without WSL or dependency downloads, see
+[the one-computer harness](testnet/SINGLE_MACHINE.md). It shares an existing
+Python 3.12 environment's dependencies and tests TLS clients, wallets and
+economic scenarios under explicit disk quotas.
 
 Read the community charter and start 100 synthetic wallets:
 
@@ -373,6 +379,23 @@ The creator name is a declared attribution, not an identity certificate. The
 proof establishes a fingerprint's existence at the attested time; legal
 ownership and originality require their own supporting evidence.
 
+## Economic pilot simulation
+
+Model offers, needs, prices, capacity, delivery and settlement in a separate
+offline state. Start with explicitly synthetic data:
+
+```powershell
+& $Python -B -m economy example --participants 30 --days 30 --out economy/results/example_30
+& $Python -B -m economy run --input economy/results/example_30 --out economy/results/baseline_30 --seed 42 --replications 5
+& $Python -B -m economy compare --input economy/results/example_30 --out economy/results/comparison_30 --seed 42 --replications 10
+```
+
+The same CSV schema can import authorized, pseudonymous field observations.
+Reports distinguish delivery, settlement, defaults, credit reservations,
+capacity budgets and unmet needs. This is a fixed-quote shadow simulation,
+not a market-price forecast or proof of real-world viability. It creates no
+real orders and does not modify the live ledger. See [economy/GUIDE.md](economy/GUIDE.md).
+
 ## Governance and next milestones
 
 The [community charter](exchange/CHARTE.md) sets the project's moral purpose.
@@ -388,15 +411,17 @@ size measurements do not substitute for energy or environmental-impact data.
 
 ## Detailed documentation
 
-These companion documents currently use French; this README provides the
-English entry point and ledger-access command reference.
+Most companion documents currently use French; this README and the economic
+simulation guide provide English entry points.
 
 - [Local testnet, recovery and wallet tracing](testnet/GUIDE.md)
 - [Windows/Linux mutual-TLS LAN pilot](testnet/LAN.md)
 - [Windows and WSL in parallel](testnet/WSL_WINDOWS.md)
+- [One-computer lightweight test without WSL](testnet/SINGLE_MACHINE.md)
 - [Mutual-credit ledger and owner consent](exchange/GUIDE.md)
 - [Moral charter and signed acceptance](exchange/CHARTE.md)
 - [Source provenance and RFC 3161 verification](provenance/GUIDE.md)
+- [Economic inputs, scenarios and field-pilot protocol](economy/GUIDE.md)
 - [Contribution guidelines](CONTRIBUTING.md)
 - [Governance](GOVERNANCE.md)
 - [Security reporting and current scope](SECURITY.md)
