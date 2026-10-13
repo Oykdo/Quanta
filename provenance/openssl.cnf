@@ -1,0 +1,11 @@
+# Configuration scoped to this tool's OpenSSL child process.
+openssl_conf = openssl_init
+
+[openssl_init]
+providers = providers
+
+[providers]
+default = default_provider
+
+[default_provider]
+activate = 1

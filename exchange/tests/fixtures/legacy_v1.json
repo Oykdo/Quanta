@@ -1,0 +1,55 @@
+{
+  "header": {
+    "version": 1,
+    "ledger_id": "d8f3d689c5b4599d3c1475a579e2e1fd652f70f6a1a68fdd93608ede98da3710",
+    "created_at": 1791824926,
+    "unit": "LOCAL",
+    "quanta_per_unit": 1000,
+    "policy": {
+      "max_debt": 100000,
+      "max_credit": 100000,
+      "max_total_debt": 1000000,
+      "max_accounts": 100,
+      "max_events": 1000,
+      "max_ttl_seconds": 300,
+      "max_output_bytes": 10000000,
+      "interest": 0,
+      "protocol_fee": 0
+    }
+  },
+  "accounts": {
+    "8fb09713f089fe313cb0b245ce1a4a5be25f3e2ecc8b774af5e70f05251d99a6": {
+      "public_key": "f20db281e09a7d34afbc9e584c80c2444153a2c59011a316731c918a2b185c1d",
+      "debt_limit": 100000,
+      "credit_limit": 100000,
+      "balance": 0,
+      "nonce": 0,
+      "enabled": true
+    }
+  },
+  "events": [
+    {
+      "index": 1,
+      "previous_hash": "28e00ae709a5f452b38bfaea480b996d190e3a5096f4372821227cfbff7df1c2",
+      "committed_at": 1791824926,
+      "payload": {
+        "version": 1,
+        "kind": "join",
+        "ledger_id": "d8f3d689c5b4599d3c1475a579e2e1fd652f70f6a1a68fdd93608ede98da3710",
+        "request_id": "850d9d0e3d811755da49ff543799e5e5",
+        "issued_at": 1791824926,
+        "expires_at": 1791825226,
+        "public_key": "f20db281e09a7d34afbc9e584c80c2444153a2c59011a316731c918a2b185c1d",
+        "account": "8fb09713f089fe313cb0b245ce1a4a5be25f3e2ecc8b774af5e70f05251d99a6",
+        "debt_limit": 100000,
+        "credit_limit": 100000,
+        "policy_hash": "8bdb1a4e269fe1247a795f937c9d5f9b3c018867cd12da4ec079a65d2ec079a9"
+      },
+      "signatures": {
+        "8fb09713f089fe313cb0b245ce1a4a5be25f3e2ecc8b774af5e70f05251d99a6": "1156ad1bf4a0ba013690a80f3e487109970259fc1b24116a4997a31c4a9f17277a807957feca2de27201c94e87d4c31ae0a241b240ae51f98173909d007e970f"
+      },
+      "hash": "26c84830d23ea2c848d374f0c246a2fee1aec73a8495e9a45601b8c7e57f6029"
+    }
+  ],
+  "head": "26c84830d23ea2c848d374f0c246a2fee1aec73a8495e9a45601b8c7e57f6029"
+}

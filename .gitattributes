@@ -1,0 +1,10 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.cnf text eol=lf
+*.json text eol=lf
+LICENSE text eol=lf
+*.sqlite3 binary
+*.vault binary
+*.bin binary

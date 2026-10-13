@@ -1,0 +1,41 @@
+# Runtime, local environments and private material
+.venv*/
+.vscode/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log
+.env
+.env.*
+*.pem
+*.crt
+*.csr
+*.key
+*.vault
+*.qvault
+*.sqlite*
+*.bin
+*.pt
+secrets/
+**/results/*
+!**/results/.gitkeep
+/resultats/
+
+# Historical neural laboratory: separate from this public network source tree
+/lab.py
+/model.py
+/data.py
+/runtime.py
+/GUIDE.txt
+/requirements.txt
+/tests/
+/v2/*
+!/v2/storage.py
+
+# Packaging and local build outputs
+build/
+dist/
+*.egg-info/
+*.zip
+*.tsq
+*.tsr
